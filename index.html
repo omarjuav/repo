@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josivânia Alves</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Josivânia Alves</div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+            <a href="index.html" class="active">Ambientes Integrados</a>
+            <a href="construidos.html">Construídos</a>
+            <a href="lavanderias.html">Lavanderias</a>
+            <a href="banheiros.html">Banheiros</a>
+            <a href="salas.html">Salas</a>
+            <a href="quartos.html">Quartos</a>
+            <a href="comercial.html">Comercial</a>
+            <a href="cozinhas.html">Cozinhas</a>
+            <a href="escritorios.html">Escritórios</a>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile">
+            <a href="index.html" class="active">Ambientes Integrados</a>
+            <a href="construidos.html">Construídos</a>
+            <a href="lavanderias.html">Lavanderias</a>
+            <a href="banheiros.html">Banheiros</a>
+            <a href="salas.html">Salas</a>
+            <a href="quartos.html">Quartos</a>
+            <a href="comercial.html">Comercial</a>
+            <a href="cozinhas.html">Cozinhas</a>
+            <a href="escritorios.html">Escritórios</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Ambientes Integrados</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/ambientes/image1.jpg" alt="Ambientes Integrados 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/ambientes/image2.jpg" alt="Ambientes Integrados 2">
+                </div>
+                <!-- Adicione mais slides conforme necessário -->
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Josivânia Alves. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper.js
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Toggle Mobile Menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMobile = document.querySelector('.nav-mobile');
+
+        menuToggle.addEventListener('click', () => {
+            navMobile.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
